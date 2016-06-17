@@ -1,6 +1,0 @@
-﻿FilterInvalidOperationException
-Son
-Wife
-Husband
-EvilMethod
-Filtered!

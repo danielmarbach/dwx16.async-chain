@@ -1,13 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using ApprovalTests;
-using ApprovalTests.Reporters;
 using NUnit.Framework;
 
 namespace AsyncChain
 {
-    [UseReporter(typeof(DiffReporter))]
     [TestFixture]
     public class SyncChain
     {
@@ -36,8 +33,11 @@ namespace AsyncChain
 
             // TODO: Compose here the chain manually
 
-
-            Approvals.Verify(writer);
+            Assert.That(writer.ToString(), Is.EqualTo(@"Son
+Wife
+Husband
+done
+"));
         }
 
         // TODO: Extend and implement this method
@@ -74,7 +74,11 @@ namespace AsyncChain
 
             Invoke();
 
-            Approvals.Verify(writer);
+            Assert.That(writer.ToString(), Is.EqualTo(@"Son
+Wife
+Husband
+done
+"));
         }
 
         // TODO: Extend and implement this method
@@ -99,7 +103,13 @@ namespace AsyncChain
             // - Add filter on the top of the chain
 
 
-            Approvals.Verify(writer);
+            Assert.That(writer.ToString(), Is.EqualTo(@"FilterInvalidOperationException
+Son
+Wife
+Husband
+EvilMethod
+Filtered!
+"));
         }
 
         // TODO: Extend and implement this method,
