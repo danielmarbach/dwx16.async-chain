@@ -66,6 +66,7 @@
     <Compile Include="1-SyncChain\SyncChain.cs" />
     <Compile Include="2-AsyncChain\AsyncChain.cs" />
     <Compile Include="3-AsyncChainOO\AsyncChain.cs" />
+    <Compile Include="4-AsyncChainState\AsyncChainState.cs" />
     <Compile Include="Infrastructure\AsyncCountdownEvent.cs" />
     <Compile Include="Infrastructure\TaskCompletionSource.cs" />
     <Compile Include="Infrastructure\TaskExtensions.cs" />
